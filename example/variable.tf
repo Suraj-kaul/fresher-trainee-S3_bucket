@@ -1,3 +1,3 @@
-variable "bucket"{
-    type = set(any)
+variable "buck"{
+    type = string
 }
