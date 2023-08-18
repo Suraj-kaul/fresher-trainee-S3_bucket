@@ -12,7 +12,7 @@ pipeline{
   stages{
         stage("git checkout"){
             steps{
-            git branch: 'main', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
+            git branch: 'master', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
             }
             }
         stage("Terraform init"){
