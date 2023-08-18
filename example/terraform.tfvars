@@ -2,6 +2,7 @@ bucket = {
     "suraj1234567890" = {
 
     acl = "private",
+
     tags = {
         owner = "surajkaul"
 
