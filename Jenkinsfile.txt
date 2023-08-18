@@ -18,17 +18,17 @@ pipeline{
         stage("Terraform init"){
             steps{
             sh '''terraform --version
-                  terraform init'''
+                  terraform -chdir=module/init'''
             }
         }
         stage("Terraform apply"){
             steps{
-            sh "terraform apply --auto-approve"
+            sh "terraform -chdir=module/apply --auto-approve"
             }
         }
         stage("Terraform destroy"){
             steps{
-            sh "terraform destroy --auto-approve"
+            sh "terraform -chdir=module/destroy --auto-approve"
                   }
         }
     }
