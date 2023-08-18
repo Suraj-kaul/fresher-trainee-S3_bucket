@@ -5,7 +5,7 @@ bucket = {
 
 
     tags = {
-        owner = "surajkauls"
+        owner = "surajkaulss"
 
     }
    
