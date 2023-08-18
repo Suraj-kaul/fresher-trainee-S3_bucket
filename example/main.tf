@@ -1,7 +1,9 @@
 module "s3"{
     source = "../"
     for_each = var.bucket
-    bucket = each.value
+    buckets = each.key
+    acl = each.value.acl
+    tags= each.value.tags
     
 
 }

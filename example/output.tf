@@ -1,3 +1,3 @@
-output "s3_c"{
-    value = {for i in var.bucket :i=>i}
-}
+# output "s3_c"{
+#     value = {for i in var.bucket :i=>i}
+# }

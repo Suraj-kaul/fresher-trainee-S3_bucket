@@ -1,3 +1,3 @@
-variable "buck"{
-    type = string
+variable "bucket"{
+    type = map(any)
 }
