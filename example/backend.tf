@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "tear-test-bucket"
+    bucket = "hariomtrans"
     key    = "sk.tfstate"
-    region = "us-east-1"
+    region = "us-east-2"
   }
 }
