@@ -22,15 +22,28 @@ pipeline{
                   terraform -chdir=example/ init'''
             }
         }
+        stage("Terraform plan"){
+             when {
+                // Execute this stage only when a pull request is raised
+                expression { currentBuild.changeSets[0].kind == 'REPOSITORY' }
+            }
+            steps{
+            sh "terraform -chdir=example/ plan --auto-approve"
+            }
+        }
         stage("Terraform apply"){
+             when {
+                // Execute this stage only when a pull request is raised
+                expression { currentBuild.changeSets[0].kind == 'MERGE' }
+            }
             steps{
             sh "terraform -chdir=example/ apply --auto-approve"
             }
         }
-        stage("Terraform destroy"){
-            steps{
-            sh "terraform -chdir=example/ destroy --auto-approve"
-                  }
-        }
+        // stage("Terraform destroy"){
+        //     steps{
+        //     sh "terraform -chdir=example/ destroy --auto-approve"
+        //           }
+        // }
     }
 }
