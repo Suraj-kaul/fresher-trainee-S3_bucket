@@ -19,7 +19,7 @@ pipeline{
         stage("Terraform init"){
             steps{
             sh '''terraform --version
-                  terraform -chdir=example/ init'''
+                  terraform -chdir=example/ init -reconfigure'''
             }
         }
         stage("Terraform plan"){
