@@ -13,7 +13,7 @@ pipeline{
   stages{
         stage("git checkout"){
             steps{
-            git branch: 'suraj', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
+            git branch: 'Suraj', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
             }
             //  steps{
             // git branch: 'suraj', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
