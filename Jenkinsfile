@@ -39,6 +39,7 @@ pipeline{
             steps{
             sh "terraform -chdir=example/ apply --auto-approve"
             }
+            
         }
         // stage("Terraform destroy"){
         //     steps{
