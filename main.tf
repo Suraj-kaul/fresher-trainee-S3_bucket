@@ -5,4 +5,5 @@ resource "aws_s3_bucket" "S3" {
 
   tags = var.tags
 
+
 }
