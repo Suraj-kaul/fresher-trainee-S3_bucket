@@ -15,6 +15,9 @@ pipeline{
             steps{
             git branch: 'master', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
             }
+             steps{
+            git branch: 'suraj', url: 'https://github.com/Suraj-kaul/fresher-trainee-S3_bucket.git'
+            }
             }
         stage("Terraform init"){
             steps{
